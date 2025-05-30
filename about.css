@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body {
+    background: #001542;
+    color: #fff;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards
+}
+
+.header {
+    background-color: #01153f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a,.header a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    /* opacity: 0; */
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+
+}
+
+.navbar a:hover,.header a:hover{
+    border-radius: 40px;
+    box-shadow: 0 0 10px #FFB30D;
+}
+
+.navbar a:hover,
+.header a.active{
+    color: #FFB30D;
+
+}
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0;
+    margin: 4rem ;
+    margin-top: 6rem;
+    align-items: center;
+
+     @media (max-width: 425px){
+       grid-template-columns: 1fr;
+    }
+}
+
+.image{
+    margin: 3rem;
+
+}
+
+.image img{
+    max-width: 300px;
+    animation: zoom 1s ease forwards;
+    animation-delay: 1s;
+
+    
+}
+
+.text h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+
+}
+
+.text p{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 50px;
+    animation: slideBottom .5s ease forwards;
+    animation-delay: .7s;
+}
+
+.text h1{
+    margin-bottom: 30px;
+    line-height: 50px;
+    animation: slideTop .5s ease forwards;
+    animation-delay: .7s;
+}
+
+.text h1{
+    color: #FFB30D;
+}
