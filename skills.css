@@ -1,0 +1,155 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #01153f;
+  margin: 0;
+  padding: 0;
+  color: #333;
+ 
+  @media (min-width:768px){
+     display: grid;
+  grid-template-columns: 1fr .50fr;
+  }
+}
+
+
+.header {
+    background-color: #01153f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a,.header a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+
+}
+
+.navbar a:hover,.header a:hover{
+    border-radius: 40px;
+    box-shadow: 0 0 10px #FFB30D;
+}
+
+.navbar a:hover,
+.header a.active {
+    color: #FFB30D;
+
+}
+
+.education-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom: 40px;
+  color: #FFB30D;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+
+  @media (max-width: 768px){
+    margin-top: 8rem;
+  }
+}
+
+.edu-card {
+  background-color: #fff;
+  border-left: 5px solid #4a90e2;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-4px);
+}
+
+.edu-card h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #34495e;
+}
+
+.degree {
+  font-style: italic;
+  margin: 5px 0;
+}
+
+.duration, .grade {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 2px 0;
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -100px;
+}
+
+.skill-box{
+    display: flex;
+    gap: .5rem;
+}
+
+.edu-card{
+    min-width: 100px;
+    text-align: center;
+}
+
+.edu{
+    animation: zoom 1s ease infinite;
+    animation-delay: 3s;
+}
+
+@keyframes zoom {
+    
+    80%{
+        transform: scale(90%);
+    }
+    100%{
+        transform: scale(100%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop  {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
